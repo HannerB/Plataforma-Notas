@@ -1,42 +1,30 @@
 import * as React from "react";
-
-// importing material UI components
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+// import Logo from "../../src/assets/logo.png"
 
 export default function Header() {
-	return (
-		<AppBar position="static">
-			<Toolbar>
-				{/*Inside the IconButton, we 
-					can render various icons*/}
-				<IconButton
-					size="large"
-					edge="start"
-					color="inherit"
-					aria-label="menu"
-					sx={{ mr: 2 }}
-				>
-					{/*This is a simple Menu 
-					Icon wrapped in Icon */}
-					<MenuIcon />
-				</IconButton>
-				{/* The Typography component applies 
-					default font weights and sizes */}
-
-				<Typography
-					variant="h6"
-					component="div"
-					sx={{ flexGrow: 1 }}
-				>
-					GeeksforGeeks Header
-				</Typography>
-				<Button color="inherit">Login</Button>
-			</Toolbar>
-		</AppBar>
-	);
+    return (
+        <AppBar position="static" style={{ backgroundColor: "#2196f3" }}>
+            <Toolbar>
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    sx={{ mr: 2 }}
+                >
+                    {/* <img src={Logo} alt="Logo" style={{ width: 50, height: 50 }} /> */}
+                </IconButton>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+				Note-Taking Platform
+                </Typography>
+                {/* <Button color="inherit">Iniciar Sesión</Button>
+                <Button color="inherit">Registrarse</Button> */}
+            </Toolbar>
+        </AppBar>
+    );
 }
